@@ -61,6 +61,5 @@ def winner?(board)
   $win
 end
 
-winner?(board)
 
 
