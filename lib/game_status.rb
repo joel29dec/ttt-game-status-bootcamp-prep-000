@@ -56,6 +56,8 @@ end
 def over?(board)
   draw?(board) || won?(board) || full?(board)
 end
+
+puts $win
     
 def winner?(board)
   $win
