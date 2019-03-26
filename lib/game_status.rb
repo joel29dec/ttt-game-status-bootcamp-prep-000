@@ -3,7 +3,7 @@
 # Define your WIN_COMBINATIONS constant
 board = ["X", "O", "X", "O", "X", "X", "O", "X", "O"]
 WIN_COMBINATIONS = [[0, 1, 2],[3, 4, 5],[6, 7, 8],[0, 3, 6],[1, 4, 7],[2, 5, 8],[0, 4, 8],[2, 4, 6]]
-win = ""
+$win = ""
 # Helper Method
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
@@ -26,6 +26,7 @@ winner = false
 
     if winning_move
       winner = true
+      $win = position_1
       return win_combination # return the win_combination indexes that won.
     else
       winner = false
