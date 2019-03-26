@@ -58,7 +58,7 @@ def over?(board)
 end
     
 def winner?(board)
-  puts $win
+  $win
 end
 
 winner?(board)
