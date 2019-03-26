@@ -29,6 +29,7 @@ winner = false
       $win = position_1
       return win_combination # return the win_combination indexes that won.
     else
+      $win = nil
       winner = false
     end
   end
