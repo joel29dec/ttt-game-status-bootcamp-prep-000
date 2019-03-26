@@ -60,7 +60,7 @@ end
 
 def winner?(board)
   won?(board)
-  puts $win
+  $win
 end
 
 winner?(board)
