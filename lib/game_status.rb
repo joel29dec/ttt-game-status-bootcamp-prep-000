@@ -1,7 +1,7 @@
 
 
 # Define your WIN_COMBINATIONS constant
-#board = ["X", "O", "X", "O", "X", "X", "O", "X", "O"]
+board = ["X", "O", "X", "O", "X", "X", "O", "X", "O"]
 WIN_COMBINATIONS = [[0, 1, 2],[3, 4, 5],[6, 7, 8],[0, 3, 6],[1, 4, 7],[2, 5, 8],[0, 4, 8],[2, 4, 6]]
 
 # Helper Method
@@ -25,7 +25,6 @@ winner = false
     # draw = (position_1 == "X" && position_2 == "O" && position_3 == "X") || (position_1 == "O" && position_2 == "X" && position_3 == "O")
 
     if winning_move
-      won = true
       winner = true
       return win_combination # return the win_combination indexes that won.
     else
@@ -50,31 +49,20 @@ def full?(board)
 end
 
 def draw?(board)
-    won = won?(board).is_a? Array   
-    if (full?(board) == true || full?(board) == false) && won == true
-    false
-    elsif full?(board) == true && won == false
-     true
-    end 
+  full?(board) && !won?(board)
 end
 
 def over?(board)
-  won = won?(board).is_a? Array
-  if draw?(board) == true
-    true
-  else
-    false
-  end
-  
-  
-  end
+  draw?(board) || won?(board) || full?(board)
 end
     
-  
+def winner?(board)
+  if won?(board) == false
+    nil
+  elsif 
+  end
+end
+
+winner?(board)
 
 
-
-
-
-
-  
